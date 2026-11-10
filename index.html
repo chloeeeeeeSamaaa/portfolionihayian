@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hayian Hrienz Requina | BSIT Student &amp; Web Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Hayian Hrienz Requina, a 4th-year BSIT student at Bohol Island State University – Balilihan Campus, seeking a 486-hour OJT placement in web development and database management."
+    />
+    <meta name="theme-color" content="#09090b" />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <script>
+      // Runs before the page paints: enables scroll animations and applies
+      // the saved theme (or the device's theme) so there's no flash.
+      (function () {
+        var root = document.documentElement;
+        var theme = null;
+        root.classList.add("js");
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+        }
+        root.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="header" id="header">
+      <div class="container nav-wrap">
+        <a href="#home" class="logo">hayian<span>.</span></a>
+
+        <nav class="navbar" id="navbar">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's talk</a>
+
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Switch to light mode"
+          >
+            <i class="bx bx-sun"></i>
+          </button>
+
+          <button
+            class="menu-btn"
+            id="menu-icon"
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <i class="bx bx-menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <span class="status-pill">
+              <span class="dot"></span>
+              Open for OJT · 486 hours
+            </span>
+
+            <h1>Hi, I'm <span class="gradient-text">Hayian Hrienz Requina</span></h1>
+
+            <p class="hero-role">
+              &gt; I'm a <span class="multiple-text"></span>
+            </p>
+
+            <p class="hero-desc">
+              A fourth-year BSIT student at Bohol Island State University –
+              Balilihan Campus. I build web and mobile projects with the help
+              of AI tools, but I make sure I understand how the code works. I'm
+              looking for an OJT placement where I can learn from real projects
+              and keep improving.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                View my projects <i class="bx bx-right-arrow-alt"></i>
+              </a>
+              <a href="assets/files/Hayian-Requina-Resume.pdf" class="btn btn-ghost btn-download" download>
+                Download CV <i class="bx bx-download"></i>
+              </a>
+              <a href="#contact" class="btn btn-ghost">Contact me</a>
+            </div>
+
+            <div class="social-icons">
+              <a href="https://github.com/chloeeeeeeSamaaa" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="bx bxl-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/hayian-hrienz-requina-769925366/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="bx bxl-linkedin-square"></i>
+              </a>
+              <a href="https://www.instagram.com/hayian_zxc/" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="bx bxl-instagram-alt"></i>
+              </a>
+              <a href="https://www.facebook.com/kingwing.65" target="_blank" rel="noopener" aria-label="Facebook">
+                <i class="bx bxl-facebook"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <button
+              type="button"
+              class="photo-frame photo-flip"
+              id="photoFlip"
+              aria-pressed="false"
+              aria-label="Flip between formal and casual photo of Hayian Hrienz Requina"
+            >
+              <span class="photo-flip-inner">
+                <img class="photo-face" src="assets/images/profile2.jpg" alt="" />
+                <img class="photo-face photo-face--back" src="assets/images/profile.jpg" alt="" />
+              </span>
+            </button>
+
+            <div class="float-card float-card--top">
+              <i class="bx bx-code-alt"></i>
+              <div>
+                <strong>PHP · MySQL · JS</strong>
+                <span>Main stack</span>
+              </div>
+            </div>
+
+            <div class="float-card float-card--bottom">
+              <i class="bx bxs-graduation"></i>
+              <div>
+                <strong>BSIT · 4th Year</strong>
+                <span>BISU – Balilihan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ABOUT ================= -->
+      <section class="section" id="about">
+        <div class="container about-grid">
+          <div class="about-text reveal">
+            <p class="eyebrow">// about me</p>
+            <h2 class="section-title">Building systems that meet real needs</h2>
+            <p>
+              I am a fourth-year Bachelor of Science in Information Technology
+              student at Bohol Island State University – Balilihan Campus. I
+              enjoy building systems and solving problems, and I've gained
+              practical experience in web development, databases, and
+              application development through academic and personal projects.
+            </p>
+            <p>
+              Most of my recent projects were built with AI-assisted
+              development. I use AI tools to work faster, but I don't just copy
+              what they give me: I read the code, figure out why it works,
+              debug it when it doesn't, and make sure I can explain it myself.
+            </p>
+            <p>
+              I'd describe my skills as beginner to intermediate. I'm
+              comfortable with the fundamentals and still learning a lot, which
+              is why I'm looking forward to my 486-hour On-the-Job Training: to
+              learn from real work and grow as a developer.
+            </p>
+
+            <div class="objective">
+              <span class="objective-label">Career objective</span>
+              <p>
+                To obtain an internship opportunity where I can apply my
+                knowledge and practical experience in information technology,
+                web development, and database management while gaining valuable
+                professional experience and contributing to the organization's
+                operations.
+              </p>
+            </div>
+
+            <h3 class="mini-title">Professional strengths</h3>
+            <ul class="chips">
+              <li><i class="bx bx-bulb"></i>Problem-Solving</li>
+              <li><i class="bx bx-refresh"></i>Adaptability</li>
+              <li><i class="bx bx-book-open"></i>Willingness to Learn</li>
+              <li><i class="bx bx-time-five"></i>Time Management</li>
+              <li><i class="bx bx-group"></i>Team Collaboration</li>
+              <li><i class="bx bx-user-check"></i>Independent Learning</li>
+            </ul>
+          </div>
+
+          <aside class="about-side reveal" style="--delay: 0.1s">
+            <div class="facts-card">
+              <h3>Quick facts</h3>
+              <dl>
+                <div>
+                  <dt>Name</dt>
+                  <dd>Hayian Hrienz Requina</dd>
+                </div>
+                <div>
+                  <dt>Course</dt>
+                  <dd>BS Information Technology</dd>
+                </div>
+                <div>
+                  <dt>Year level</dt>
+                  <dd>4th Year</dd>
+                </div>
+                <div>
+                  <dt>School</dt>
+                  <dd>Bohol Island State University – Balilihan Campus</dd>
+                </div>
+                <div>
+                  <dt>Location</dt>
+                  <dd>Bohol, Philippines</dd>
+                </div>
+                <div>
+                  <dt>OJT hours</dt>
+                  <dd>486 hours</dd>
+                </div>
+                <div>
+                  <dt>Availability</dt>
+                  <dd class="available"><span class="dot"></span>Open for OJT</dd>
+                </div>
+                <div>
+                  <dt>Email</dt>
+                  <dd><a href="mailto:hayianrequina@gmail.com">hayianrequina@gmail.com</a></dd>
+                </div>
+              </dl>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ================= SKILLS ================= -->
+      <section class="section section-alt" id="skills">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">// skills</p>
+            <h2 class="section-title">What I can do</h2>
+            <p class="section-sub">
+              The areas I've worked in and the tools I've used so far. I'm at a
+              beginner-to-intermediate level and still learning with every
+              project.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card reveal">
+              <div class="service-icon"><i class="bx bx-code-alt"></i></div>
+              <h3>Web Development</h3>
+              <p>
+                Responsive websites and web-based systems using HTML, CSS,
+                JavaScript, and PHP. I can work on both the pages people see and
+                the backend behind them.
+              </p>
+            </article>
+
+            <article class="service-card reveal" style="--delay: 0.1s">
+              <div class="service-icon"><i class="bx bx-data"></i></div>
+              <h3>Database Management</h3>
+              <p>
+                Designing MySQL databases for my projects: tables and
+                relationships, CRUD operations, and prepared statements for
+                safer queries.
+              </p>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-icon"><i class="bx bx-cog"></i></div>
+              <h3>System Development &amp; UI Design</h3>
+              <p>
+                Putting together information systems with simple, user-friendly
+                interfaces, testing and debugging as I go, and documenting how
+                they work.
+              </p>
+            </article>
+
+            <article class="service-card reveal" style="--delay: 0.1s">
+              <div class="service-icon"><i class="bx bx-devices"></i></div>
+              <h3>Mobile &amp; Desktop Apps</h3>
+              <p>
+                Learning mobile development with Flutter and Dart (MoneyMind
+                uses Firebase for login and cloud data), plus basic desktop apps
+                with Java Swing.
+              </p>
+            </article>
+          </div>
+
+          <h3 class="sub-title reveal">Technical skills</h3>
+
+          <div class="stack-grid">
+            <div class="stack-group reveal">
+              <h4>Web Development</h4>
+              <ul class="chips">
+                <li><i class="bx bxl-html5"></i>HTML5</li>
+                <li><i class="bx bxl-css3"></i>CSS3</li>
+                <li><i class="bx bxl-javascript"></i>JavaScript</li>
+                <li><i class="bx bxl-php"></i>PHP</li>
+                <li><i class="bx bx-mobile-alt"></i>Responsive Web Design</li>
+                <li><i class="bx bx-layer"></i>Frontend &amp; Backend Development</li>
+              </ul>
+            </div>
+
+            <div class="stack-group reveal" style="--delay: 0.1s">
+              <h4>Mobile &amp; Desktop Development</h4>
+              <ul class="chips">
+                <li><i class="bx bxl-flutter"></i>Flutter</li>
+                <li><i class="bx bx-code-curly"></i>Dart</li>
+                <li><i class="bx bxl-java"></i>Java</li>
+                <li><i class="bx bx-window-alt"></i>Java Swing (GUI)</li>
+                <li><i class="bx bxl-firebase"></i>Firebase Authentication</li>
+                <li><i class="bx bxl-google"></i>Google Sign-In</li>
+              </ul>
+            </div>
+
+            <div class="stack-group reveal">
+              <h4>Database Management</h4>
+              <ul class="chips">
+                <li><i class="bx bx-data"></i>MySQL</li>
+                <li><i class="bx bx-sitemap"></i>Database Design</li>
+                <li><i class="bx bx-edit"></i>CRUD Operations</li>
+                <li><i class="bx bx-search-alt"></i>SQL Queries</li>
+                <li><i class="bx bx-link"></i>Database Relationships</li>
+                <li><i class="bx bx-shield-quarter"></i>Prepared Statements</li>
+                <li><i class="bx bxl-firebase"></i>Firebase Firestore</li>
+                <li><i class="bx bx-archive"></i>Hive</li>
+              </ul>
+            </div>
+
+            <div class="stack-group reveal" style="--delay: 0.1s">
+              <h4>Development Tools</h4>
+              <ul class="chips">
+                <li><i class="bx bxl-visual-studio"></i>Visual Studio Code</li>
+                <li><i class="bx bx-server"></i>XAMPP</li>
+                <li><i class="bx bx-cube"></i>Laragon</li>
+                <li><i class="bx bx-table"></i>phpMyAdmin</li>
+                <li><i class="bx bxl-git"></i>Git</li>
+                <li><i class="bx bxl-github"></i>GitHub</li>
+              </ul>
+            </div>
+
+            <div class="stack-group stack-group--wide reveal">
+              <h4>Other Skills</h4>
+              <ul class="chips">
+                <li><i class="bx bx-bot"></i>AI-Assisted Development</li>
+                <li><i class="bx bx-cog"></i>System Development</li>
+                <li><i class="bx bx-palette"></i>UI Design</li>
+                <li><i class="bx bx-bug"></i>Debugging &amp; Troubleshooting</li>
+                <li><i class="bx bx-check-circle"></i>Software Testing</li>
+                <li><i class="bx bx-file"></i>Technical Documentation</li>
+                <li><i class="bx bx-bulb"></i>Problem-Solving</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROJECTS ================= -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">// projects</p>
+            <h2 class="section-title">Featured projects</h2>
+            <p class="section-sub">
+              Systems and applications I've designed and built. Click a project
+              to see its full feature list.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <div class="project-thumb">
+                <img
+                  src="assets/images/projects/corella-pension-system.png"
+                  style="--thumb-x: 16%"
+                  alt="Login page of the Social Pension Management System for Senior Citizens in Corella"
+                />
+              </div>
+              <div class="project-body">
+                <span class="project-type">Web System</span>
+                <h3>Web-Based Social Pension Management System for Senior Citizens in Corella</h3>
+                <p>
+                  A web-based information management system designed to
+                  streamline senior citizen record management and social
+                  pension distribution in Corella, Bohol.
+                </p>
+                <ul class="feature-list">
+                  <li>Senior Citizen Registration and Management</li>
+                  <li>Pension Management</li>
+                  <li>Pension Release Monitoring</li>
+                  <li>Payment Records</li>
+                  <li>Search and Filtering</li>
+                  <li>Report Generation</li>
+                  <li>Printable Pension Reports</li>
+                  <li>User and Staff Management</li>
+                  <li>Audit Logs</li>
+                </ul>
+                <ul class="tags">
+                  <li>PHP</li>
+                  <li>MySQL</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+                <div class="project-actions">
+                  <button class="project-link" type="button">
+                    View details <i class="bx bx-right-arrow-alt"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" style="--delay: 0.1s">
+              <div class="project-thumb">
+                <img
+                  src="assets/images/projects/moneymind.svg"
+                  alt="MoneyMind – Journal &amp; Financial Goal Tracker cover"
+                />
+              </div>
+              <div class="project-body">
+                <span class="project-type">Mobile App · Personal Project</span>
+                <h3>MoneyMind – Journal &amp; Financial Goal Tracker</h3>
+                <p>
+                  A personal finance and journaling application designed to
+                  help users manage their finances, monitor expenses, track
+                  savings goals, and record their emotional well-being through
+                  mood journaling.
+                </p>
+                <ul class="feature-list">
+                  <li>Expense and Income Tracking</li>
+                  <li>Financial Goal Management</li>
+                  <li>Savings Progress Monitoring</li>
+                  <li>Spending Categories</li>
+                  <li>Mood Journaling</li>
+                  <li>Financial Insights and Summaries</li>
+                  <li>Offline-First Data Management</li>
+                  <li>Cloud Synchronization</li>
+                  <li>User Authentication</li>
+                  <li>Dynamic Currency Support</li>
+                </ul>
+                <ul class="tags">
+                  <li>Flutter</li>
+                  <li>Dart</li>
+                  <li>Firebase</li>
+                  <li>Hive</li>
+                </ul>
+                <div class="project-actions">
+                  <button class="project-link" type="button">
+                    View details <i class="bx bx-right-arrow-alt"></i>
+                  </button>
+                  <a
+                    class="project-repo"
+                    href="https://github.com/chloeeeeeeSamaaa/moneyMind"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="MoneyMind source code on GitHub"
+                  >
+                    <i class="bx bxl-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= EDUCATION ================= -->
+      <section class="section section-alt" id="education">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">// education</p>
+            <h2 class="section-title">Education &amp; training</h2>
+            <p class="section-sub">
+              Where I'm studying, and the seminars and training I've taken part
+              in.
+            </p>
+          </div>
+
+          <article class="facts-card edu-main reveal">
+            <div class="edu-icon"><i class="bx bxs-graduation"></i></div>
+            <div class="edu-info">
+              <span class="edu-label">Education</span>
+              <h3>Bachelor of Science in Information Technology</h3>
+              <p>Bohol Island State University – Balilihan Campus</p>
+            </div>
+            <div class="edu-side">
+              <span class="edu-date">2023 – Present</span>
+              <span class="edu-status">4th Year</span>
+            </div>
+          </article>
+
+          <h3 class="sub-title reveal">Seminars &amp; training</h3>
+
+          <div class="training-grid">
+            <article class="facts-card training-card reveal">
+              <div class="training-top">
+                <i class="bx bx-bot"></i>
+                <span class="training-year">2026</span>
+              </div>
+              <h4>AI-Assisted Development: Power, Responsibility, and Real-World Impact</h4>
+              <p>BISU Balilihan Campus</p>
+            </article>
+
+            <article class="facts-card training-card reveal" style="--delay: 0.1s">
+              <div class="training-top">
+                <i class="bx bx-shield-quarter"></i>
+                <span class="training-year">2025</span>
+              </div>
+              <h4>Cybersecurity Awareness</h4>
+              <p>BISU Balilihan Campus</p>
+            </article>
+
+            <article class="facts-card training-card reveal" style="--delay: 0.2s">
+              <div class="training-top">
+                <i class="bx bx-cloud"></i>
+              </div>
+              <h4>SAP Learning Journey</h4>
+              <p>Exposure to:</p>
+              <ul class="tags">
+                <li>SAP Cloud ERP</li>
+                <li>SAP Analytics Cloud</li>
+                <li>SAP Business Technology Platform</li>
+                <li>SAP Integration Suite</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section class="section" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-info reveal">
+            <p class="eyebrow">// contact</p>
+            <h2 class="section-title">Let's work together</h2>
+            <p>
+              I'm currently looking for an organization where I can complete
+              my 486-hour On-the-Job Training. If you have an opening or would
+              like to know more about my work, send me a message and I'll get
+              back to you as soon as I can.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <a class="contact-item" href="mailto:hayianrequina@gmail.com">
+                  <i class="bx bx-envelope"></i>
+                  <span><small>Email</small>hayianrequina@gmail.com</span>
+                </a>
+              </li>
+              <li>
+                <a class="contact-item" href="tel:+639638746183">
+                  <i class="bx bx-phone"></i>
+                  <span><small>Phone</small>0963 874 6183</span>
+                </a>
+              </li>
+              <li>
+                <div class="contact-item">
+                  <i class="bx bx-map"></i>
+                  <span><small>Location</small>Bohol, Philippines</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <form id="contactForm" class="contact-form reveal" style="--delay: 0.1s">
+            <div class="form-row">
+              <div class="field">
+                <label for="fullName">Full name</label>
+                <input type="text" id="fullName" placeholder="Juan Dela Cruz" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email address</label>
+                <input type="email" id="email" placeholder="you@company.com" autocomplete="email" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" rows="6" placeholder="Tell me about the OJT opportunity..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Send message <i class="bx bx-send"></i>
+            </button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= PROJECT MODAL ================= -->
+    <div class="project-modal" id="projectModal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="close-modal" type="button" aria-label="Close">
+          <i class="bx bx-x"></i>
+        </button>
+        <img id="modalImage" src="" alt="" />
+        <div class="modal-body">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDescription"></p>
+          <h4 class="modal-label" id="modalFeaturesLabel">Key features</h4>
+          <ul class="feature-list" id="modalFeatures"></ul>
+          <h4 class="modal-label">Technologies</h4>
+          <ul class="tags" id="modalTags"></ul>
+          <div class="modal-links" id="modalLinks"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>
+          © <span id="year">2026</span> <span class="footer-name">Hayian Hrienz Requina</span>.
+          Designed &amp; built by me.
+        </p>
+
+        <div class="social-icons social-icons--small">
+          <a href="https://github.com/chloeeeeeeSamaaa" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/hayian-hrienz-requina-769925366/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin-square"></i></a>
+          <a href="https://www.instagram.com/hayian_zxc/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bx bxl-instagram-alt"></i></a>
+          <a href="https://www.facebook.com/kingwing.65" target="_blank" rel="noopener" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#home" class="back-top" aria-label="Back to top"><i class="bx bx-up-arrow-alt"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
